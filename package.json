@@ -1,0 +1,27 @@
+{
+  "name": "accesslide",
+  "version": "1.0.0",
+  "description": "An accessible and modern HTML5-CSS-JS framework for presentation",
+  "main": "index.htm",
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-css": "^0.5.4",
+    "grunt-combine-media-queries": "^1.0.20",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-myth": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/access42/AccesSlide.git"
+  },
+  "author": "Access42",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/access42/AccesSlide/issues"
+  },
+  "homepage": "https://github.com/access42/AccesSlide#readme"
+}

@@ -1,0 +1,10 @@
+#wrapper{
+	font-size:150%;
+	font-size:2.5vh;
+}
+@media (--small) {
+	#wrapper{
+		font-size:120%;
+		font-size:1.8vh;
+	}
+}
