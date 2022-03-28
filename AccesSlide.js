@@ -749,13 +749,19 @@ function Toc(){
 	$( config.Summary.id ).appendChild( Ctitle );
 	//Set summary list
 	for( var i = 0; i < TabSlide.length; i++ ){
-		Target = TabSlide[i].querySelector( 'h2' ) || TabSlide[i].querySelector( 'h1' ) || TabSlide[i].querySelector( 'h3' );
-		//Target = TabSlide[i].firstElementChild;
-		if( Target ){
-			Txt[i] = Target.innerText || Target.textContent;
-		}
-		else{
-			Txt[i] = TabSlide[i].getAttribute( 'aria-label' );
+		if (TabSlide[i].querySelector( 'h1' ) && TabSlide[i].querySelector( 'h2' )) {
+			Txt[i] = TabSlide[i].querySelector( 'h1' ).innerText || TabSlide[i].querySelector( 'h1' ).textContent;
+			Txt[i] += " - ";
+			Txt[i] += TabSlide[i].querySelector( 'h2' ).innerText || TabSlide[i].querySelector( 'h2' ).textContent;
+		} else {
+			Target = TabSlide[i].querySelector( 'h1' ) || TabSlide[i].querySelector( 'h2' ) || TabSlide[i].querySelector( 'h3' );
+			//Target = TabSlide[i].firstElementChild;
+			if( Target ){
+				Txt[i] = Target.innerText || Target.textContent;
+			}
+			else{
+				Txt[i] = TabSlide[i].getAttribute( 'aria-label' );
+			}
 		}
 	}
 	var Cul = document.createElement( 'OL' );

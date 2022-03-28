@@ -155,10 +155,6 @@ table {
     margin: auto;
 }
 
-table, th, td {
-    border: 1px solid grey;
-}
-
 caption {
     padding: 5px;
     font-size: 60%;
@@ -199,19 +195,29 @@ th, td {
 /** @subsection 2.1 HEADINGS **/
 
 h2 {
-    margin-bottom: 0;
-    padding: 0.1em;
-    border-left: 5px solid var(--theme);
+    color: var(--font);
+    margin-bottom: 1.5em;
+    /*border-left: 5px solid var(--theme);*/
     font-variant: small-caps;
     line-height: 1.1em;
-    background: var(--backg-alt);
+    /*background: var(--backg-alt);*/
     font-family: 'os-bold';
+    position: relative;
 }
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+    width: 2em;
+    height: 0.2em;
+    background: var(--theme);
+}
+
 
 @media (--medium) {
     h2 {
-        float: left;
-        margin-bottom: 0.5em;
+        /*float: left;*/
     }
 
     h2 + * {
@@ -248,45 +254,16 @@ h3 {
     }
 }
 
-h4, h5, h6 {
-    margin: 1em 0 0.3em 0;
+h4 {
+    margin: 0.3em;
 }
 
-
-dl {
-    margin: 2em 0;
-    padding: 0;
-    font-family: georgia, times, serif;
+h5 {
+    margin: 0.3em;
 }
 
-dt {
-    position: relative;
-    left: 0;
-    top: 1.1em;
-    width: 3.5em;
-    font-weight: bold;
-}
-
-dd {
-    border-left: 1px solid #000;
-    margin: 0 0 0 4.5em;
-    padding: 0 0 .5em .5em;
-}
-
-q {
-    font-style: italic;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
-    border: 0;
+h6 {
+    margin: 0.3em;
 }
 
 /** @subsection 2.2 TEXT **/
@@ -309,25 +286,15 @@ q {
     margin: 0.5em 0;
 }
 
-.slide .small {
-    font-size: 70%;
-    font-weight: normal;
-}
+/*.slide .small {*/
+/*    font-size: 70%;*/
+/*    font-weight: normal;*/
+/*}*/
 
-.slide .tiny {
-    font-size: 50%;
-    font-weight: normal;
-}
-
-.slide .middle {
-    font-size: 80%;
-    font-weight: normal;
-}
-
-.slide .small *, .slide .middle *, .slide .tiny * {
-    font-size: 100%;
-    font-weight: normal;
-}
+/*.slide .small * {*/
+/*    font-size: 100%;*/
+/*    font-weight: normal;*/
+/*}*/
 
 /**
  * -------------------------
@@ -505,30 +472,14 @@ q {
 @media (--medium) {
     .col-left {
         float: left;
-    }
-
-    .col-right {
-        float: right;
-    }
-
-    .col-left, .col-right {
         width: 50%;
-    }
-
-    .col-left {
         padding: 0 5% 0 0;
     }
 
     .col-right {
+        float: right;
+        width: 50%;
         padding: 0 0 0 5%;
-    }
-
-    .col-left.col-left--tiny, .col-right.col-right--tiny {
-        width: 33%;
-    }
-
-    .col-left.col-left--big, .col-right.col-right--big {
-        width: 66%;
     }
 }
 
@@ -676,26 +627,7 @@ button.disc1:focus {
     margin: 0 2rem 2rem 0;
 }
 
-/**
- * -------------------------
- * @section 10. ENCADRE
- * -------------------------
- */
-
-.slide .encadre {
-    background: var(--backg-alt);
-    font-family: 'os-bold';
-    padding: 1rem;
-}
-
-.showalt {
-    position: relative;
-    display: inline-block;
-}
-.showalt::after {
-    content: attr(data-alt);
-    border: 1px solid red;
-    position: absolute;
-    top: 50%;
-    right: 100%;
+.slide-double--left,
+.slide-double::after {
+    background: #f2efee;
 }
