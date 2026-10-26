@@ -1,3 +1,0 @@
-@custom-media --medium screen and (min-width: 48em);
-@custom-media --small screen and (max-width: 48em);
-@custom-media --bw screen and (max-width: 48em) and (min-width:24em);
