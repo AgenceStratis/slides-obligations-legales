@@ -111,6 +111,7 @@ html:not(.js) .barre-bas { display: none; }
 .source { color: var(--gris-texte); font-size: 1rem; padding-top: 1.5rem; }
 .slide.sombre .source { color: #efefef; }
 
+.surtitre-h2 { display: block; color: var(--rouge); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; font-size: 0.9375rem; line-height: 1.3; margin-bottom: 0.5rem; }
 .couverture .surtitre { text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; font-size: 0.9375rem; margin: 0 0 1rem; }
 .couverture h2 { font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1.05; }
 .couverture .chapeau { font-size: clamp(1.25rem, 2.5vw, 1.75rem); line-height: 1.4; color: var(--gris-texte); margin: 0 0 2rem; }
@@ -146,6 +147,7 @@ html:not(.js) .barre-bas { display: none; }
 .obligations > li::before { content: counter(oblig); font-weight: 800; font-size: 2.25rem; line-height: 1; color: var(--rouge); grid-row: span 2; }
 .obligations strong { font-size: 1.25rem; line-height: 1.35; }
 .obligations .ref { display: block; color: var(--gris-secondaire); font-size: 1rem; }
+.obligations .declarative { color: var(--rouge); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.875rem; }
 
 .mentions { margin: 0.5rem 0 0; }
 .mentions div { background: var(--gris-fond); border-left: 1rem solid var(--gris-filet); padding: 1rem 1.25rem; margin-bottom: 0.75rem; }

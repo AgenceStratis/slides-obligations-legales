@@ -27,7 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var courant = 0;
   var modeTout = false;
 
-  function titreDe(n) { return slides[n].querySelector('h2').textContent.replace(/\s+/g, ' ').trim(); }
+  /* Titre seul, sans le surtitre « Obligation N sur 3 » (sommaire, <title>, annonce) */
+  function titreDe(n) {
+    var h2 = slides[n].querySelector('h2').cloneNode(true);
+    Array.prototype.forEach.call(h2.querySelectorAll('.surtitre-h2, .surtitre-h2 + .sr-only'), function (el) { el.parentNode.removeChild(el); });
+    return h2.textContent.replace(/\s+/g, ' ').trim();
+  }
 
   /* Hauteur réelle des barres fixes (elle varie avec le zoom et la taille du texte) */
   function mesurerBarres() {

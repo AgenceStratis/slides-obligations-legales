@@ -1,0 +1,5 @@
+Déposer dans ce dossier le PDF de la présentation, sous le nom :
+Accessibilite-numerique_obligations-legales-Stratis.pdf
+
+Le lien « Télécharger la présentation (PDF) » du diaporama pointe vers ce fichier.
+Le PDF doit être accessible, ou ce diaporama HTML doit être proposé comme alternative.
