@@ -132,6 +132,7 @@ html:not(.js) .barre-bas { display: none; }
 .frise h3 { font-weight: 800; font-size: 2rem; margin: 0 0 0.5rem; }
 .frise h3::before { content: ""; display: block; width: 1rem; height: 1rem; background: var(--rouge); margin-bottom: 0.75rem; }
 .frise p { margin: 0; color: var(--gris-texte); }
+@media (min-width: 60rem) { .frise-4 { grid-template-columns: repeat(4, 1fr); row-gap: 2rem; } }
 
 .etapes { counter-reset: etape; list-style: none; padding: 0 !important; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(13rem, 100%), 1fr)); gap: 1.25rem; }
 .etapes > li { counter-increment: etape; background: var(--gris-fond); border-top: 0.375rem solid var(--rouge); padding: 1.5rem; }
